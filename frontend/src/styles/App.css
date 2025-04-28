@@ -1,0 +1,202 @@
+/* Container principal */
+.app-container {
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+  padding: 2rem;
+}
+
+/* Caixa do chat */
+.chatbox {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Área de mensagens */
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  background: #222;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Mensagens */
+.message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.5s ease; /* Animação de surgimento */
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+/* Bolha de conversa */
+.bubble {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.4;
+  background-color: #333;
+  padding: 10px 15px 20px 15px;
+  border-radius: 16px;
+  max-width: 100%;
+  width: fit-content;
+  max-width: 80%;
+  font-size: 14px;
+  position: relative;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timestamp da mensagem */
+.time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+  text-align: right;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+}
+
+/* Mensagem do usuário */
+.message.user .text {
+  background-color: #444;
+  color: #ccc;
+  text-align: left;
+  padding: 15px 20px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* <- ESSENCIAL! */
+  width: fit-content;
+  max-width: 300px;
+  border-radius: 16px;
+}
+
+/* Mensagem do bot */
+.message.bot .text {
+  background-color: #b1a169; /* Cor vinho sólida */
+  color: #2e2c20;
+  border: 1px solid rgba(0,0,0,0.6);
+  align-self: flex-start;
+  text-align: left;
+  width: fit-content;
+  max-width: 80%;
+}
+
+/* Mensagem do bot */
+.message.bot .time {
+  color: #2e2c20;
+}
+
+/* Avatar */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #444;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+/* Área de entrada */
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.input-area input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+/* Placeholder some no foco */
+.input-area input:focus::placeholder {
+  color: transparent;
+}
+
+/* Botão enviar */
+.input-area button {
+  background: #b1a169;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover e clique no botão */
+.input-area button:hover {
+  background: #a9a06b;
+}
+
+.input-area button:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar personalizada */
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Animação para entrada suave das mensagens */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
