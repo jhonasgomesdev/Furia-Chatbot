@@ -96,6 +96,10 @@ Navegador Google Chrome instalado
 
 ### 3. Frontend (React + Vite)
 
+- Para testes em localhost, alterar o arquivo ChatBox.jsx nas linhas 24 ~ 30
+- Alterar const response = await fetch("https://furia-chatbot-qq58.onrender.com/chat"
+- Novo valor const response = await axios.post('http://127.0.0.1:8000/chat'
+-- Já se encontra no código a linha.
 - cd frontend
 - npm install
 - npm start
