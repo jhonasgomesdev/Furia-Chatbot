@@ -73,22 +73,21 @@ Google Gemini API Key
 
 Navegador Google Chrome instalado
 
-Instalação e execução:
+**Instalação e execução:**
 
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
+- cd backend
+- python -m venv venv
+- source venv/bin/activate | *Windows: .\venv\Scripts\activate*
+- pip install -r requirements.txt
+- uvicorn main:app --reload
 
-pip install -r requirements.txt
-uvicorn main:app --reload
+*A API será servida em: http://localhost:8000/chat*
 
-A API será servida em: http://localhost:8000/chat
+⚠️ **Certifique-se de substituir sua chave Gemini diretamente em responses.py:**
 
-⚠️ Certifique-se de substituir sua chave Gemini diretamente em responses.py:
+***genai.configure(api_key="SUA_CHAVE_AQUI")***
 
-genai.configure(api_key="SUA_CHAVE_AQUI")
-
-**COMO PEGAR A CHAVE**
+### 2.1 COMO PEGAR A CHAVE
 1. Entre no link -> [LINK](https://ai.google.dev/gemini-api/docs?hl=pt-br)
 2. Faça login com seu google
 3. Clique em gerar uma chave da API Gemini
@@ -97,13 +96,12 @@ genai.configure(api_key="SUA_CHAVE_AQUI")
 
 ### 3. Frontend (React + Vite)
 
-cd frontend
-npm install
-npm start
+- cd frontend
+- npm install
+- npm start
+- *Acesse o frontend no localhost informado*
 
-Acesse o frontend no localhost informado
-
-/
+---
 
 ## 🔐 Endpoints da API
 
@@ -124,24 +122,24 @@ POST /chat
   "reply": "Eae, Guerreiro! O coach atual da FURIA é: (Retorno proveniente da liquipedia)"
 }
 
+---
 
 ## 🛠️ Futuras Melhorias
-• Integração com agenda de partidas futuras.
+- Integração com agenda de partidas futuras.
+- Interface com múltiplos temas (claro/escuro).
+- Otimização do scraping para múltiplas páginas.
+- Deploy online (Render, Vercel, ou Railway).
 
-• Interface com múltiplos temas (claro/escuro).
-
-• Otimização do scraping para múltiplas páginas.
-
-• Deploy online (Render, Vercel, ou Railway).
-
+---
 
 ## 👨‍💻 Desenvolvedor
-**Jhonas Gomes Coutinho de Souza**
+***Jhonas Gomes Coutinho de Souza***
 
 Projeto | Desafio Final 1
 
 [LinkedIn](https://www.linkedin.com/in/jhonasgomes/)
 
+---
 
 ## 🛒 Links úteis
 [FURIA.gg](https://www.furia.gg/)
