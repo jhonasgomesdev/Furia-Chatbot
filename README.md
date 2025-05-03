@@ -36,23 +36,24 @@ Este projeto é parte do desafio **"Experiência Conversacional FURIA"**, cujo o
 
 📦 chatbot-furia/
 ├── backend/
-│ ├── main.py # API com FastAPI
-│ ├── liquipedia.py # Scraping da Liquipedia
-│ ├── responses.py # Integração com Gemini + formatação
-│ └── requirements.txt # Dependências Python
+│   ├── main.py             # API com FastAPI
+│   ├── liquipedia.py       # Scraping da Liquipedia
+│   ├── responses.py        # Integração com Gemini + formatação
+│   └── requirements.txt    # Dependências Python
 │
 ├── frontend/
-│ ├── public/
-│ │ ├── adidas-furia.png # Banner da loja FURIA
-│ │ ├── bot.png # Logo da Fúria utilizada no Chatbot
-│ │ └── furia-gif.mp4 # Vídeo institucional
-│ └── src/
-│ ├── components/
-│ │ └── Chatbox.jsx
-│ ├── styles/
-│ │ ├── Chatbox.css
-│ │ └── Landing.css
-│ └── App.jsx
+│   ├── public/
+│   │   ├── adidas-furia.png   # Banner da loja FURIA
+│   │   ├── bot.png            # Logo da FURIA usada no chatbot
+│   │   └── furia-gif.mp4      # Vídeo institucional
+│   └── src/
+│       ├── components/
+│       │   └── Chatbox.jsx
+│       ├── styles/
+│       │   ├── Chatbox.css
+│       │   └── Landing.css
+│       └── App.jsx
+
 
 
 ---
