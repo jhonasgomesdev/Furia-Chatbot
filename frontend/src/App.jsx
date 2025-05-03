@@ -42,6 +42,9 @@ function App() {
         </a> 
         <h1 className="hero-title">ENTRE NO UNIVERSO DA FURIA</h1>
         <p className="hero-subtitle">E fale com a <strong>Pantera</strong>, nossa assistente virtual oficial!</p>
+        <div className="furia-video-container">
+          <video src="/furia-gif.mp4" autoPlay loop muted playsInline className="furia-video"/>
+        </div>
       </main>
 
       {/* Chat Toggle Button com Tooltip */}

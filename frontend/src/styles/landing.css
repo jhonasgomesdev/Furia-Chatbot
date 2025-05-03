@@ -175,7 +175,20 @@
   .fullbanner-image:hover {
     transform: scale(1.01);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-  }  
+  }
+  
+  .furia-video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .furia-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
   
   
   @keyframes fadeTooltip {
