@@ -88,7 +88,7 @@ A API será servida em: http://localhost:8000/chat
 genai.configure(api_key="SUA_CHAVE_AQUI")
 
 **COMO PEGAR A CHAVE**
-1. Entre no link -> https://ai.google.dev/gemini-api/docs?hl=pt-br
+1. Entre no link -> [LINK](https://ai.google.dev/gemini-api/docs?hl=pt-br)
 2. Faça login com seu google
 3. Clique em gerar uma chave da API Gemini
 4. Desça até o fim da página, clique nos 3 pontos em Ações e Copy Key
@@ -135,13 +135,15 @@ POST /chat
 
 ## 👨‍💻 Desenvolvedor
 **Jhonas Gomes Coutinho de Souza**
+
 Projeto | Desafio Final 1
-LinkedIn
+
+[LinkedIn](https://www.linkedin.com/in/jhonasgomes/)
 
 
 ## 🛒 Links úteis
-FURIA.gg - (https://www.furia.gg/)
+[FURIA.gg](https://www.furia.gg/)
 
-Liquipedia - FURIA (https://liquipedia.net/counterstrike/FURIA)
+[Liquipedia - FURIA](https://liquipedia.net/counterstrike/FURIA)
 
-Google Gemini API - (https://ai.google.dev/gemini-api/docs?hl=pt-br)
+[Google Gemini API](https://ai.google.dev/gemini-api/docs?hl=pt-br)
