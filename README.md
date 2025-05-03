@@ -114,6 +114,7 @@ Acesse o frontend no localhost informado
 ## 📚 Exemplo de uso da API
 
 POST /chat
+
 {
   "message": "Quem é o coach da FURIA?"
 }
