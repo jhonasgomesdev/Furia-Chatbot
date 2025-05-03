@@ -33,7 +33,7 @@ Este projeto é parte do desafio **"Experiência Conversacional FURIA"**, cujo o
 ---
 
 ## 📁 Estrutura do Projeto
-
+```text
 📦 chatbot-furia/
 ├── backend/
 │   ├── main.py             # API com FastAPI
@@ -53,7 +53,7 @@ Este projeto é parte do desafio **"Experiência Conversacional FURIA"**, cujo o
 │       │   ├── Chatbox.css
 │       │   └── Landing.css
 │       └── App.jsx
-
+```
 
 
 ---
