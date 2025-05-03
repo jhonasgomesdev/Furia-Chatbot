@@ -2,17 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
 function ChatBox() {
-  const [messages, setMessages] = useState(() => {
-    const saved = localStorage.getItem('chatMessages');
-    return saved ? JSON.parse(saved) : [];
-  });
-
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    if (loading || !input.trim()) return;
 
     const userMessage = {
       sender: 'user',
@@ -50,7 +46,27 @@ function ChatBox() {
   };
 
   useEffect(() => {
-    localStorage.setItem('chatMessages', JSON.stringify(messages));
+    if (messages.length === 0) {
+      const loadingMessage = {
+        sender: 'bot',
+        text: 'Digitando...',
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+  
+      setMessages([loadingMessage]);
+  
+      setTimeout(() => {
+        setMessages([{
+          sender: 'bot',
+          text: 'Fala guerreiro! Eu sou a Pantera, o chatbot do time de CS da Fúria, como posso te ajudar?',
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        }]);
+      }, 1500); // 1 segundo de delay
+    }
+  }, []);
+  
+
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
@@ -64,7 +80,8 @@ function ChatBox() {
                 <img src="/bot.png" alt="Bot Avatar" className="avatar bot" />
               )}
               <div>
-                <div className="text">{msg.text}
+                <div className="text">
+                  {msg.text}
                   <span className="time">{msg.time}</span>
                 </div>
               </div>
