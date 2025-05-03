@@ -22,7 +22,10 @@ function ChatBox() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/chat', {
+      /* Para ambiente de desenvolvimento
+      const response = await axios.post('http://127.0.0.1:8000/chat'
+      */
+      const response = await fetch("https://furia-chatbot-qq58.onrender.com/chat", {
         message: input
       });
 
