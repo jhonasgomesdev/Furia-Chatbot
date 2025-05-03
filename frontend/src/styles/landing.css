@@ -146,7 +146,7 @@
 
   .chatbox-container {
     position: fixed;
-    top: 23%;
+    top: 21%;
     right: 20px;
     width: 450px; /* ou 100% se quiser ocupar tudo */
     height: 500px;
